@@ -16,38 +16,33 @@ namespace Fib
     /// </summary>
     public partial class MainWindow : Window
     {
-        public  void oblicz1()
-        {
-          
-
-
-
-
-        }
-        public MainWindow()
+             public MainWindow()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Int128 a = 0;
-            int ile;
+           int ile; //wielkosc ciagu, ilosc elementow
+            String tmp=" "; //zmienna pomocnicza do zapisu wyniku
 
-            Int32.TryParse(ilosc.Text,out ile);
-            
-            Int128[] tablica = new Int128[ile];
+            Int32.TryParse(ilosc.Text,out ile); //pobranie ilosci elementow z pola tekstowego
+                                                //i zamiana pobranej wartości na int
 
-            tablica[0] = 0;
-            tablica[1] = 1;
+            Int128[] tablica = new Int128[ile]; //utworzenie tablicy o wielkosci ile
+                                                //typu Int128, aby pomiescic duze liczby
+            tablica[0] = 0; //pierwszy element ciagu
+            tablica[1] = 1; //drugi element ciagu
 
             for (int i = 2; i < ile; i++)
             {
-                tablica[i] = tablica[i - 2] * tablica[i - 1];
-                Console.WriteLine(tablica[i]);
-
+                tablica[i] = tablica[i - 2] + tablica[i - 1];
+              // Console.WriteLine(tablica[i]);
+               tmp += tablica[i].ToString();
+                tmp += " ";
             }
 
+            wynik.Text = tmp;
 
         }
     }

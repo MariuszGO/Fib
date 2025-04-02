@@ -10,5 +10,10 @@
         <TextBlock  Text="Podaj ilość liczb: "/>
         <TextBox x:Name="ilosc" Width="200" Margin="60,26,540,352"/>
         <Button Content="Prześlij" Margin="85,123,565,261" Click="Button_Click"/>
+        
+            
+        
+        <TextBlock x:Name="wynik" Margin="60,200,60,32"/>
+        
     </Grid>
 </Window>
