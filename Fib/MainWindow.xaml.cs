@@ -34,15 +34,15 @@ namespace Fib
             tablica[0] = 0; //pierwszy element ciagu
             tablica[1] = 1; //drugi element ciagu
 
-            for (int i = 2; i < ile; i++)
+            for (int i = 2; i < ile; i++) //petla zaczynajaca od 3 elementu ciagu
             {
-                tablica[i] = tablica[i - 2] + tablica[i - 1];
-              // Console.WriteLine(tablica[i]);
-               tmp += tablica[i].ToString();
-                tmp += " ";
+                tablica[i] = tablica[i - 2] + tablica[i - 1]; //obliczenie i-tego elementu ciagu
+                                                              // Console.WriteLine(tablica[i]);
+                tmp += tablica[i].ToString();//dodanie i-tego elementu ciagu do zmiennej pomocniczej
+                tmp += " "; //dodanie spacji po kazdym elemencie ciagu
             }
 
-            wynik.Text = tmp;
+            wynik.Text = tmp; //wyswietlenie wyniku w polu tekstowym
 
         }
     }
